@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Image from "next/image";  // Import Image component from Next.js
 
 // Define the structure of the platform data
 type PlatformData = {
@@ -127,10 +128,12 @@ const ProductPage: React.FC = () => {
 
         {/* Screenshot */}
         <div className="text-center">
-          <img
+          <Image
             src={platformData[activePlatform].screenshot}
             alt={`${activePlatform} Screenshot`}
             className="mx-auto w-full max-w-lg rounded-lg shadow-lg"
+            width={600} // Specify width and height for optimization
+            height={400}
           />
         </div>
 

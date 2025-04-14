@@ -1,5 +1,5 @@
-// components/AboutCompany.tsx
 import React from "react";
+import Image from "next/image";  // Import Next.js Image component
 
 const AboutCompany: React.FC = () => {
   return (
@@ -7,10 +7,12 @@ const AboutCompany: React.FC = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Side: Image */}
         <div className="flex justify-center items-center">
-          <img
-            src="aboutillustration.svg"
+          <Image
+            src="/aboutillustration.svg" // Ensure the correct path for the image
             alt="WinRAR Illustration"
             className="rounded-lg shadow-lg w-full md:max-w-md"
+            width={500}  // Set the width
+            height={300} // Set the height
           />
         </div>
         {/* Right Side: Content */}
