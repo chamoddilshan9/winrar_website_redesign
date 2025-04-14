@@ -1,5 +1,6 @@
 // components/HeroSection.tsx
 import React from "react";
+import Image from "next/image";
 
 const HeroSection: React.FC = () => {
   return (
@@ -28,9 +29,11 @@ const HeroSection: React.FC = () => {
 
         {/* Right Section */}
         <div className="lg:w-1/2">
-          <img
-            src="/logo.png" // Corrected path to logo
+          <Image
+            src="/logo.png"
             alt="Software Illustration"
+            width={500}
+            height={500}
             className="w-full max-w-sm mx-auto lg:max-w-lg"
           />
         </div>

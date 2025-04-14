@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,10 +13,10 @@ const Header = () => {
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" role="navigation">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img alt="Logo" src="/logo.png" className="h-8 w-auto" />
-          </a>
+            <Image alt="Logo" src="/logo.png" width={32} height={32} className="h-8 w-auto" />
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -27,20 +29,20 @@ const Header = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          <a href="product" className="text-sm font-semibold text-gray-900">Products</a>
-          <a href="/download" className="text-sm font-semibold text-gray-900">Download</a>
-          <a href="support" className="text-sm font-semibold text-gray-900">Support</a>
-          <a href="news" className="text-sm font-semibold text-gray-900">News</a>
+          <Link href="/product" className="text-sm font-semibold text-gray-900">Products</Link>
+          <Link href="/download" className="text-sm font-semibold text-gray-900">Download</Link>
+          <Link href="/support" className="text-sm font-semibold text-gray-900">Support</Link>
+          <Link href="/news" className="text-sm font-semibold text-gray-900">News</Link>
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img alt="Logo" src="/logo.png" className="h-8 w-auto" />
-            </a>
+              <Image alt="Logo" src="/logo.png" width={32} height={32} className="h-8 w-auto" />
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -53,30 +55,30 @@ const Header = () => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="product"
+                <Link
+                  href="/product"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Products
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/download"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Download
-                </a>
-                <a
-                  href="support"
+                </Link>
+                <Link
+                  href="/support"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Support
-                </a>
-                <a
-                  href="news"
+                </Link>
+                <Link
+                  href="/news"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   News
-                </a>
+                </Link>
               </div>
             </div>
           </div>

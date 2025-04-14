@@ -21,7 +21,7 @@ const AboutCompany: React.FC = () => {
             About WinRAR
           </h2>
           <p className="text-gray-600 text-lg">
-            WinRAR is the world's leading compression software, offering a fast,
+            WinRAR is the world&apos;s leading compression software, offering a fast,
             efficient, and user-friendly way to compress and decompress files.
             Trusted by millions, WinRAR simplifies file sharing and storage
             without compromising on security or performance.
