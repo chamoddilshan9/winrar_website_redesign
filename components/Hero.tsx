@@ -1,6 +1,5 @@
 // components/HeroSection.tsx
 import React from "react";
-import Image from "next/image"; // Using Next.js Image component for optimization
 
 const HeroSection: React.FC = () => {
   return (
@@ -28,12 +27,10 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className="lg:w-1/2 flex justify-center lg:justify-end">
-          <Image
-            src="/logo.png" // Path to image
-            alt="Illustration of the compression software"
-            width={500} // Specify width for image optimization
-            height={500} // Specify height for image optimization
+        <div className="lg:w-1/2">
+          <img
+            src="/logo.png" // Corrected path to logo
+            alt="Software Illustration"
             className="w-full max-w-sm mx-auto lg:max-w-lg"
           />
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";  // Import Next.js Image component
-import Link from "next/link";    // Import Next.js Link component
 
 const AboutCompany: React.FC = () => {
   return (
@@ -22,7 +21,7 @@ const AboutCompany: React.FC = () => {
             About WinRAR
           </h2>
           <p className="text-gray-600 text-lg">
-            WinRAR is the world&apos;s leading compression software, offering a fast,
+            WinRAR is the world's leading compression software, offering a fast,
             efficient, and user-friendly way to compress and decompress files.
             Trusted by millions, WinRAR simplifies file sharing and storage
             without compromising on security or performance.
@@ -32,16 +31,12 @@ const AboutCompany: React.FC = () => {
             has been helping users organize and secure their data for decades.
           </p>
           <div className="flex gap-4 mt-6">
-            <Link href="/learn-more">
-              <a className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition duration-300">
-                Learn More
-              </a>
-            </Link>
-            <Link href="/contact">
-              <a className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
-                Contact Us
-              </a>
-            </Link>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition duration-300">
+              Learn More
+            </button>
+            <button className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
+              Contact Us
+            </button>
           </div>
         </div>
       </div>
